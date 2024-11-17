@@ -39,7 +39,7 @@ If you want to view or contribute to the project locally, you can follow these s
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/<your-username>/personal-portfolio.git
+    git clone https://github.com/<maziz6>/personal-portfolio.git
     ```
 
 2. Navigate to the `docs` folder:
