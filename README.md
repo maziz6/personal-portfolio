@@ -23,7 +23,6 @@ This portfolio is a work in progress, as I am actively learning and implementing
 ## How to View the Website
 Visit the live site here: (https://maziz6.github.io/personal-portfolio/)
 
-
 ## Folder Structure
 
 my-repository/
