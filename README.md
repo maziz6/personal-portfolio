@@ -21,9 +21,12 @@ This portfolio is a work in progress, as I am actively learning and implementing
 - **GitHub Pages** for hosting.
 
 ## How to View the Website
-Visit the live site here: [Your GitHub Pages Link](https://<your-username>.github.io/personal-portfolio)
+Visit the live site here: (https://maziz6.github.io/personal-portfolio/)
+
 
 ## Folder Structure
+
+root/ ├── file:///Users/mominaaziz/Desktop/My-portfolio/index.html # Main HTML file ├── file:///Users/mominaaziz/Desktop/My-portfolio/style.css # Styling  └── assets/ # Images, icons, and other resources
 
 ## Future Goals
 1. Fully implement JavaScript functionalities to create a dynamic user experience.
