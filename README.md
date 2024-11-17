@@ -73,10 +73,6 @@ If you're not familiar with GitHub workflows, you can also open issues to discus
 2. Add detailed case studies for each project, showcasing challenges faced, solutions provided, and outcomes achieved.
 3. Expand the portfolio as I work on more projects, including client work as part of my freelancing journey.
 
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ---
 
 Thank you for checking out my portfolio! Please feel free to reach out if you have any questions or want to collaborate.
