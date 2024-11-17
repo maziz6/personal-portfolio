@@ -25,8 +25,8 @@ Visit the live site here: [Personal Portfolio Website](https://maziz6.github.io/
 
 ## Folder Structure
 
-file:///Users/mominaaziz/Desktop/My-portfolio/index.html  # Main HTML file
-file:///Users/mominaaziz/Desktop/My-portfolio/style.css  # CSS file
+file:///Users/mominaaziz/Desktop/My-portfolio/index.html  #Main HTML file
+file:///Users/mominaaziz/Desktop/My-portfolio/style.css  #CSS file
 
 ## How to Set Up Locally
 
