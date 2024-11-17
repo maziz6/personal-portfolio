@@ -26,7 +26,13 @@ Visit the live site here: (https://maziz6.github.io/personal-portfolio/)
 
 ## Folder Structure
 
-root/ ├── file:///Users/mominaaziz/Desktop/My-portfolio/index.html # Main HTML file ├── file:///Users/mominaaziz/Desktop/My-portfolio/style.css # Styling  └── assets/ # Images, icons, and other resources
+my-repository/
+├── docs/
+│   ├── index.html  # Main HTML file
+│   ├── style.css  # CSS file
+│   ├── scripts.js  # JavaScript file (if any)
+│   └── assets/  # Folder for images, icons, and other resources
+└── README.md 
 
 ## Future Goals
 1. Fully implement JavaScript functionalities to create a dynamic user experience.
