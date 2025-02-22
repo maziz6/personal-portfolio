@@ -1,19 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Navigation Links
-    const navLinks = document.querySelectorAll("header nav a");
-    if (navLinks.length > 0) {
-        navLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                navLinks.forEach((nav) => nav.classList.remove("active"));
-                link.classList.add("active");
-            });
-        });
-    } else {
-        console.warn("No navigation links found");
-    }
-
-    // Menu Button and Navigation
-    
     const menuBtn = document.getElementById("menu-btn");
     const nav = document.querySelector("nav");
 
@@ -40,26 +25,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };
 
+        // Toggle menu on button click
         menuBtn.addEventListener("click", toggleMenu);
 
-        nav.addEventListener("click", (event) => {
-            if (event.target.tagName === "A") {
-                nav.classList.remove("active");
-                const icon = menuBtn.querySelector("i");
-                if (icon) {
-                    icon.classList.add("fa-bars");
-                    icon.classList.remove("fa-times");
-                }
-            }
-        });
+// Close menu when a nav link is clicked
+    nav.addEventListener("click", (event) => {
+        if (event.target.tagName === "A") {
+            nav.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", false);
+            const icon = menuBtn.querySelector("i");
+            if (icon) {
+                icon.classList.add("fa-bars");
+                icon.classList.remove("fa-times");
+             }
+        }
+    });
 
+    // Handle window resize with debouncing
         let resizeTimeout;
-        window.addEventListener("resize", () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(resetMenu, 200);
-        });
+        const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resetMenu, 200);
 
-        resetMenu(); // Initial reset on page load
+        };
+
+        window.addEventListener("resize", handleResize);
+
+    resetMenu(); // Initial reset on page load
     } else {
         console.error("Menu button or navigation not found");
     }
