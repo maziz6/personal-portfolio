@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+/* styles for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -16,10 +17,10 @@ html {
 
 body {
     width: 100%;
-    height: 100vh; /* Fixed typo: changed '100hv' to '100vh' */
+    height: 100vh; 
     overflow-x: hidden;
-    background-color: white; /* Set background to white */
-    color: black; /* Set text color to black for readability */
+    background-color: white; 
+    color: black; 
 }
 
 header {
@@ -29,12 +30,12 @@ header {
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: white; /* Ensure header matches the body */
+    background-color: white;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -51,9 +52,10 @@ header {
 
 nav a {
     font-size: 1.8rem;
-    color: black; /* Changed text color to black for better contrast */
+    color: black;
     margin-left: 4rem;
     font-weight: 500;
+    text-decoration: none;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
@@ -64,29 +66,30 @@ nav a.active {
     border-bottom: 3px solid skyblue;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 995px) {
     nav {
         position: absolute;
-        display: block;
-        top: 0;
+        display: none;
+        top: 100%; /* Position below the header */
         right: 0;
         width: 40%;
         border-left: 3px solid skyblue;
         border-bottom: 3px solid skyblue;
         border-bottom-left-radius: 2rem;
         padding: 1rem;
-        background-color: white; /* Ensure nav matches the body background */
+        background-color: white;
+        z-index: 999; /* Ensure it's below the header but above other content */
     }
 
     nav.active {
-        display: block;
+        display: block; /* Show navigation when active */
     }
 
     nav a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        color: black; /* Consistent text color */
+        color: black;
     }
 
     nav a:hover,
@@ -96,6 +99,23 @@ nav a.active {
         border-bottom: 0.5rem solid skyblue;
     }
 }
+
+/* For tablets and larger phones */
+.menu-btn {
+    display: none; /* Hidden by default */
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+ }
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Show menu button for mobile views */
+    }}
 
 section {
     min-height: 100vh;
@@ -144,7 +164,7 @@ span {
 }
 
 .home-img img:hover {
-    transform: scale(1.05); /* Adjusted hover effect */
+    transform: scale(1.05); 
 }
 
 .social-icons a {
@@ -194,22 +214,20 @@ span {
     margin-top: 4rem;
 }
 
-.menu-btn {
-    font-size: 2.5rem;
-    color: skyblue;
-    cursor: pointer;
-    display: none;
-    transition: 0.3s ease;
+.menu-btn.active i {
+    transform: rotate(90deg) scale(1.2);
 }
 
+/* Hover Effect */
+.menu-btn:hover {
+    color: dodgerblue;
+}
+
+/* Media Query: Show Menu Button on Smaller Screens */
 @media (max-width: 995px) {
     .menu-btn {
         display: block;
     }
-}
-
-.menu-btn.active i {
-    transform: rotate(90deg);
 }
 
 footer {
